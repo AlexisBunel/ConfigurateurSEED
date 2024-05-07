@@ -1,0 +1,107 @@
+@use "reset";
+@use "base";
+
+.grid-container {
+  display: grid;
+  grid:
+    "header header" 9rem
+    "main aside" calc(100vh - 9rem)
+    / 3.5fr 1fr;
+  align-items: center;
+
+  // Header
+
+  header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    grid-area: header;
+    background-color: var(--background);
+    border-bottom: 2px solid var(--text);
+    .logo {
+      margin-left: 2rem;
+    }
+    .separator {
+      width: 3px;
+      height: 100%;
+      margin: 0 3rem;
+      background-color: var(--text);
+    }
+    .home-btn {
+      font-size: 6rem;
+      color: var(--text);
+      transition: all 0.2s;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+    ul {
+      display: flex;
+      margin-left: 3rem;
+      font-size: 3rem;
+      li {
+        margin: 0 3rem;
+        a {
+          display: flex;
+          align-items: center;
+          color: var(--gray);
+          transition: all 0.2s;
+          &:hover {
+            color: var(--primary);
+          }
+        }
+        span {
+          margin: 0 1rem;
+          padding: 0 1rem;
+          border: 3px solid;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  // Main
+
+  main {
+    height: 100%;
+    grid-area: main;
+    background-color: purple;
+  }
+
+  // Aside
+
+  aside {
+    height: 100%;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-left: 2px solid var(--primary);
+    .gamme {
+      height: 8rem;
+      width: 100%;
+      align-content: center;
+      background-color: var(--primary);
+      text-align: center;
+    }
+    .config {
+      padding: 2rem 0 0 2rem;
+      background-color: red;
+      .with-foot {
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+        input {
+          height: 2.5rem;
+          width: 2.5rem;
+          cursor: pointer;
+          background-color: var(--primary);
+        }
+        label {
+          margin-left: 1rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

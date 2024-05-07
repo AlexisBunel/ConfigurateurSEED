@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text);
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid: "header header" 9rem "main aside" calc(100vh - 9rem)/3.5fr 1fr;
+  align-items: center;
+}
+.grid-container header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-area: header;
+  background-color: var(--background);
+  border-bottom: 2px solid var(--text);
+}
+.grid-container header .logo {
+  margin-left: 2rem;
+}
+.grid-container header .separator {
+  width: 3px;
+  height: 100%;
+  margin: 0 3rem;
+  background-color: var(--text);
+}
+.grid-container header .home-btn {
+  font-size: 6rem;
+  color: var(--text);
+  transition: all 0.2s;
+}
+.grid-container header .home-btn:hover {
+  color: var(--primary);
+}
+.grid-container header ul {
+  display: flex;
+  margin-left: 3rem;
+  font-size: 3rem;
+}
+.grid-container header ul li {
+  margin: 0 3rem;
+}
+.grid-container header ul li a {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  transition: all 0.2s;
+}
+.grid-container header ul li a:hover {
+  color: var(--primary);
+}
+.grid-container header ul li span {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  border: 3px solid;
+  border-radius: 50%;
+}
+.grid-container main {
+  height: 100%;
+  grid-area: main;
+  background-color: purple;
+}
+.grid-container aside {
+  height: 100%;
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-left: 2px solid var(--primary);
+}
+.grid-container aside .gamme {
+  height: 8rem;
+  width: 100%;
+  align-content: center;
+  background-color: var(--primary);
+  text-align: center;
+}
+.grid-container aside .config {
+  padding: 2rem 0 0 2rem;
+  background-color: red;
+}
+.grid-container aside .config .with-foot {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.grid-container aside .config .with-foot input {
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+.grid-container aside .config .with-foot label {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
